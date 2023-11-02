@@ -5,10 +5,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.center {
+    text-align: center;
+}
+
+/* The <a> tag is used for hyperlinks */
 a {
   color: #3498db;
 }
-
 a:hover {
   color: #2980b9;
 }
@@ -17,6 +21,7 @@ a:hover {
   background-color: #1a1a1a;
   color: #ffffff;
   padding: 10px;
+  font-family: Arial, sans-serif;
 }
 
 .container {

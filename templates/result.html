@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    <head>
+        <meta charset="utf-8" />
+        <title>Result</title>
+    </head>
+    <header class="center">
+	    {%if correct %}
+	    <h1>Correct!</h1>
+	    {%else%}
+	    <h1>Incorrect</h1>
+	    {%endif%}
+    </header>
+</html>

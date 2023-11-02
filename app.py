@@ -20,6 +20,11 @@ def problem_post():
     text=request.form['problem']
     print(text)
     if text == test.bin_solution:
-        return "Correct!"
+        return render_template(
+                "result.html",
+                correct=True
+                )
 
-    return "Incorrect"
+    return render_template(
+                "result.html",
+                )

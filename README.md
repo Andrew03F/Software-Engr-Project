@@ -1,19 +1,22 @@
 # Software-Engr-Project [Click here for project](https://andrew03f.github.io/Software-Engr-Project/)
+## Update
+This project uses `flask`, a popular python library for web development. To install it and get an idea of
+how it works, see this [link](https://code.visualstudio.com/docs/python/tutorial-flask).
+
 ## Workflow
 ### 1.) Branch from `main` with:
 <pre>
-git chekcout main
+git checkout main
 git pull
 git checkout -b name-of-feature
 </pre>
 
 ### 2.) Edit the code and make some commits
 
-
 ### 3.) Test it locally (manually)
 make sure you working directory is the same as the directory containing the file `index.html`, then run:
 <pre>
-  python3 -m http.server 
+  python3 -m flask run
 </pre>
 this is one way to locally serve a website
 

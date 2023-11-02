@@ -37,8 +37,3 @@ def to_binary(terms):
     # In this case, that is 'b'inary
     return [format(term, 'b') for term in terms]
 
-
-test = Problem(0, 10)
-print(test)
-test.test()
-

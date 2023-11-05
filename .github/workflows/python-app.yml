@@ -38,6 +38,9 @@ jobs:
     - name: Print working directory
       run: pwd
 
+    - name: install app
+      run: pip3 install -e .
+      
     - name: Print virtual environment status
       run: |
         pip3 list

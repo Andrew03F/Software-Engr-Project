@@ -4,7 +4,7 @@ import sys
 
 import pytest
 
-from quizapp import create_app
+#from quizapp import create_app
 from quizapp.db import get_db
 from quizapp.db import init_db
 

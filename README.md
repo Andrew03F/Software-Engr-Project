@@ -14,11 +14,10 @@ git checkout -b name-of-feature
 ### 2.) Edit the code and make some commits
 
 ### 3.) Test it locally (manually)
-make sure you working directory is the same as the directory containing the file `index.html`, then run:
+make sure you working directory is the same as the directory the `quizapp` directory, then run:
 <pre>
-  python3 -m flask run
+  flask --app quizapp run --debug
 </pre>
-this is one way to locally serve a website
 
 ### 4.) Push to remote repository
 make sure that the branch you on is your feature branch. The this will report the branch your on

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Leaderboard{% endblock %}</h2>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('quiz.play') }}">Take Quiz</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <table border="1">
+      <thead>
+          <tr>
+              <th>Rank</th>
+              <th>Username</th>
+              <th>Score</th>
+              <th>Date Created</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for score in scores %}
+              <tr>
+                  <td>{{ loop.index }}</td>
+                  <td>{{ score.username if score else '-' }}</td>
+                  <td>{{ score.score if score else '-' }}</td>
+                  <td>{{ score.created.strftime('%Y-%m-%d %H:%M:%S') if score else '-' }}</td>
+              </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+{% endblock %}

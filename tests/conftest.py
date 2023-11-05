@@ -1,5 +1,7 @@
 import os
 import tempfile
+import sys
+print(sys.path)
 
 import pytest
 

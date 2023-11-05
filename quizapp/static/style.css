@@ -1,0 +1,160 @@
+:root {
+  /* OU school colors */
+  --ou-red: rgb(132, 23, 25);
+  --ou-off-white: rgb(253, 249, 216);
+
+  --dark-theme-1: #839496;
+  --dark-theme-2: #586e75;
+  --dark-theme-3: #9d998f;
+
+  --primary: var(--ou-red);
+  --secondary: var(--ou-off-white);
+  --fill-color: var(--dark-theme-1);
+  --fill-color-secondary: var(--dark-theme-2);
+  --fill-color-tertiary: var(--dark-theme-3)
+}
+
+
+html {
+  font-family: sans-serif;
+  background: var(--fill-color-secondary);
+  padding: 1rem;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--fill-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+  color: var(--secondary);
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--secondary);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--secondary);
+}
+
+nav {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+nav h1 {
+  flex: auto;
+  margin: 0;
+}
+
+nav h1 a {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+nav ul  {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a, nav ul li span, header .action {
+  display: block;
+  padding: 0.5rem;
+}
+
+.content {
+  padding: 0 1rem 1rem;
+}
+
+.content > header {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content > header h2 {
+  flex: auto;
+  margin: 1rem 0 0.25rem 0;
+}
+
+.flash {
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--fill-color-tertiary);
+  border: 1px solid var(--primary);
+}
+
+.content:last-child {
+  margin-bottom: 0;
+}
+
+.content form {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.content input, .content textarea {
+  margin-bottom: 1em;
+  background-color: var(--fill-color-tertiary);
+}
+
+.content textarea {
+  min-height: 12em;
+  resize: vertical;
+}
+
+
+
+input[type=submit] {
+  align-self: start;
+  min-width: 10em;
+}
+
+/* FOR THE LEADERBOARD */
+table {
+  width: 80%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  background-color: var(--fill-color-tertiary) ;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+th {
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+/* Hover effect */
+a:hover {
+  background-color: var(--primary); /* Darker green on hover */
+}

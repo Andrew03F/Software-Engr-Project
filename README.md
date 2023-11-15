@@ -13,13 +13,19 @@ git checkout -b name-of-feature
 
 ### 2.) Edit the code and make some commits
 
-### 3.) Test it locally (manually)
+### 3.) Init db
+make sure you working directory is the same as the directory the `quizapp` directory, then run:
+<pre>
+  flask --app quizapp init-db
+</pre>
+
+### 4.) Test it locally (manually)
 make sure you working directory is the same as the directory the `quizapp` directory, then run:
 <pre>
   flask --app quizapp run --debug
 </pre>
 
-### 4.) Push to remote repository
+### 5.) Push to remote repository
 make sure that the branch you on is your feature branch. The this will report the branch your on
 <pre>
 git status

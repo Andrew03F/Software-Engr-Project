@@ -158,3 +158,17 @@ a {
 a:hover {
   background-color: var(--primary); /* Darker green on hover */
 }
+
+/* Timer */
+c {
+    font-size: 30px;
+    text-align: right;
+}
+
+d {
+    font-size: 30px;
+    text-align: right;
+}
+
+
+

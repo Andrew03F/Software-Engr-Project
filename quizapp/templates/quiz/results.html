@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %} You got {{count}} points! {% endblock %}</h2>
+
+<a class="action" href="{{ url_for('leaderboard.index') }}"><d href="/"> Return to Homepage </d></a>
+
+{% endblock %}
+
+

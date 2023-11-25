@@ -4,7 +4,10 @@
   <h2>{% block title %}Leaderboard{% endblock %}</h2>
   {% if g.user %}
     <a class="action" href="{{ url_for('quiz.play') }}">Take Quiz</a>
-  {% endif %}
+    {% endif %}
+    <script>
+      sessionStorage.setItem('timerValue', 60 * 2);
+      </script>
 {% endblock %}
 
 {% block content %}

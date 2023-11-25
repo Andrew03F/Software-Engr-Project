@@ -9,10 +9,10 @@
 
  
   if (!sessionStorage.getItem('timerValue')){
-      sessionStorage.setItem('timerValue', 60 * 2);
+      sessionStorage.setItem('timerValue', 60 * 2); // Set the initial countdown.
   }
   
-  let secondsLeft = parseInt(sessionStorage.getItem('timerValue')); // Set the initial countdown time in seconds
+  let secondsLeft = parseInt(sessionStorage.getItem('timerValue'));
 
   function updateTimer() {
      

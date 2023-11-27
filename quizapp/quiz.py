@@ -82,4 +82,3 @@ def count_answer():
     result = numOne * numTwo
     
     return render_template('quiz/play.html', numOneBin = numOneBin, numTwoBin = numTwoBin)
-

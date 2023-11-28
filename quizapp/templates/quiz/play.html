@@ -1,53 +1,46 @@
 {% extends 'base.html' %}
 
 {% block header %}
-
 <h2>{% block title %}GO! {% endblock %} </h2>
 
-<c id = "timer"> 02:00 </c>
+<c id="timer">02:00</c>
 <script>
+    if (!sessionStorage.getItem('timerValue')) {
+        sessionStorage.setItem('timerValue', 60 * 2); // Set the initial countdown.
+    }
 
- 
-  if (!sessionStorage.getItem('timerValue')){
-      sessionStorage.setItem('timerValue', 60 * 2); // Set the initial countdown.
-  }
-  
-  let secondsLeft = parseInt(sessionStorage.getItem('timerValue'));
+    let secondsLeft = parseInt(sessionStorage.getItem('timerValue'));
 
-  function updateTimer() {
-     
-            let minutes = Math.floor(secondsLeft / 60);
-            let seconds = secondsLeft % 60;
+    function updateTimer() {
+        let minutes = Math.floor(secondsLeft / 60);
+        let seconds = secondsLeft % 60;
 
-            document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s";
+        document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s";
 
-            if (secondsLeft <= 0) {
-                document.getElementById("timer").innerHTML = "Times Up!";
-		setTimeout(function () {
-                        window.location.href = 'results';
-                    }, 250);
-            } else {
-                secondsLeft--;
-		sessionStorage.setItem('timerValue', secondsLeft)
-            }
+        if (secondsLeft <= 0) {
+            document.getElementById("timer").innerHTML = "Times Up!";
+            setTimeout(function () {
+                window.location.href = 'results';
+            }, 250);
+        } else {
+            secondsLeft--;
+            sessionStorage.setItem('timerValue', secondsLeft)
         }
+    }
 
-        setInterval(updateTimer, 1000);
-        window.onload = updateTimer;
-    </script>
+    setInterval(updateTimer, 1000);
+    window.onload = updateTimer;
+</script>
 
 {% endblock %}
 
 {% block content %}
-
 <p> What is the product of these two binary numbers: <br> {{numOneBin}} <br> {{numTwoBin}}</p>
 
-<br>
-
-<form action="count_answer" method ="post">
-  <label for="answer"> Enter answer: </label>
-  <input type = "text" name = "answer" id = "answer" pattern= "[01]+" title = "Enter a valid binary number"  required>
-  <input type = "submit" value = "Enter">
+<form action="count_answer" method="post">
+    <label for="answer"> Enter answer: </label>
+    <input type="text" name="answer" id="answer" pattern="[01]+" title="Enter a valid binary number" required>
+    <input type="submit" value="Enter">
 </form>
 
 {% endblock %}

@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<h2>{% block title %} You got {{count}} points! {% endblock %}</h2>
+<h2>{% block title %} Quiz Results {% endblock %}</h2>
 
-<a class="action" href="{{ url_for('leaderboard.index') }}"><d href="/"> Return to Homepage </d></a>
+<a class="action" href="{{ url_for('leaderboard.index') }}">Return to Homepage</a>
 
 {% endblock %}
 
+{% block content %}
+  <p>You got {{ count }} points!</p>
 
+  <h3>All Questions:</h3>
+  <ul>
+    {% for question in quiz_details %}
+      <li>
+        {{ question['text'] }} - User Answer: {{ question['user_answer'] }} - {% if question['correct'] %}Correct{% else %}Incorrect{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
